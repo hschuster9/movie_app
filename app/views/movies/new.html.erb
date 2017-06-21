@@ -4,15 +4,15 @@
 <div class="forms">
   <div class="form-horizontal">
     <%= form_for @movie do |f| %>
-
-    <%= f.label :title, "Movie Title:" %>
+  <p>
+    <%= f.label :title, "Movie Title" %>
     <%= f.text_field :title, :class=>"form-control" %>
   <p>
     <%= f.label :storyline, "Story Line" %>
     <%= f.text_field :storyline, :class=>"form-control" %>
   <p>
     <%= f.label :release_date, "Release Date" %>
-  <%= f.date_select :release_date, {:include_blank => true, :default => nil}, :class=>"form-control" %>
+    <%= f.date_select :release_date, {:include_blank => true,:default => nil}  %>
   <p>
     <%= f.label :genres, "Genres" %>
     <%= f.text_field :genres, :class=>"form-control" %>
@@ -22,7 +22,6 @@
   <p>
 
   <%= f.submit "Create", :class =>"btn btn-primary"%>
-
 
   <% end %>
   </div>
