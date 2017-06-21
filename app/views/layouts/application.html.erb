@@ -7,9 +7,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+             <%= link_to "MovieCatalogue", movies_path, :class=> "navbar-brand mainTitle" %>
+             <div class="btn navbar-right">
+               <%= link_to "Add Movie", new_movie_path, :class=>"btn btn-success" %>
+             </div>
 
+          </div>
+      </nav>
   <body>
-    <h2 class="title"> Movie Catalogue </h2>
+
     <%= yield %>
   </body>
 </html>

@@ -1,16 +1,15 @@
-
-
+<div class="forms">
 <div class="form-horizontal">
   <%= form_for @movie do |f| %>
 
   <%= f.label :title, "Movie Title:" %>
   <%= f.text_field :title, :class=>"form-control" %>
-<p>
+<p><br>
   <%= f.label :storyline, "Story Line" %>
-  <%= f.text_field :storyline, :class=>"form-control" %>
+  <%= f.text_area :storyline , size: "10x5",:class=>"form-control" %>
 <p>
   <%= f.label :release_date, "Release Date" %>
-  <%= f.text_field :release_date, :class=>"form-control", :placeholder=>"yyyy/mm/dd" %>
+  <%= f.date_select :release_date, :class=>"form-control" %>
 <p>
   <%= f.label :genres, "Genres" %>
   <%= f.text_field :genres, :class=>"form-control" %>
@@ -18,7 +17,7 @@
   <%= f.label :link, "IMDb Link" %>
   <%= f.text_field :link, :class=>"form-control" %>
 <p>
-
+  <br>
 <%= f.submit "Update", :class =>"btn btn-primary"%>
 
 <% end %>
@@ -29,4 +28,5 @@
 <%= f.submit "Delete", :class =>"btn btn-danger"%>
 
 <% end %>
+</div>
 </div>

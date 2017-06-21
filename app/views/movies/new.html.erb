@@ -1,27 +1,29 @@
 <h5> Add Movie </h5>
 <h4><%= link_to "Home", movies_path %></h4>
 
-<div class="form-horizontal">
-  <%= form_for @movie do |f| %>
+<div class="forms">
+  <div class="form-horizontal">
+    <%= form_for @movie do |f| %>
 
-  <%= f.label :title, "Movie Title:" %>
-  <%= f.text_field :title, :class=>"form-control" %>
-<p>
-  <%= f.label :storyline, "Story Line" %>
-  <%= f.text_field :storyline, :class=>"form-control" %>
-<p>
-  <%= f.label :release_date, "Release Date" %>
-  <%= f.text_field :release_date, :class=>"form-control", :placeholder=>"yyyy/mm/dd" %>
-<p>
-  <%= f.label :genres, "Genres" %>
-  <%= f.text_field :genres, :class=>"form-control" %>
-<p>
-  <%= f.label :link, "IMDb Link" %>
-  <%= f.text_field :link, :class=>"form-control" %>
-<p>
+    <%= f.label :title, "Movie Title:" %>
+    <%= f.text_field :title, :class=>"form-control" %>
+  <p>
+    <%= f.label :storyline, "Story Line" %>
+    <%= f.text_field :storyline, :class=>"form-control" %>
+  <p>
+    <%= f.label :release_date, "Release Date" %>
+  <%= f.date_select :release_date, {:include_blank => true, :default => nil}, :class=>"form-control" %>
+  <p>
+    <%= f.label :genres, "Genres" %>
+    <%= f.text_field :genres, :class=>"form-control" %>
+  <p>
+    <%= f.label :link, "IMDb Link" %>
+    <%= f.text_field :link, :class=>"form-control" %>
+  <p>
 
-<%= f.submit "Create", :class =>"btn btn-primary"%>
+  <%= f.submit "Create", :class =>"btn btn-primary"%>
 
 
-<% end %>
+  <% end %>
+  </div>
 </div>
