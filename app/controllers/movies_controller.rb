@@ -3,10 +3,10 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     if params[:search]
-    @movies = Movie.search(params[:search])
-  else
-    @movies = Movie.all
-  end
+      @movies = Movie.search(params[:search])
+    else
+      @movies = Movie.all
+    end
   end
 
   def new
@@ -18,7 +18,6 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
-
   def edit
     @movie = Movie.find(params[:id])
   end
@@ -28,7 +27,6 @@ class MoviesController < ApplicationController
     @movie.update(movie_params)
     redirect_to movies_path
   end
-
 
   def destroy
     @movie = Movie.find(params[:id])

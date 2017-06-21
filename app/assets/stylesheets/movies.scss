@@ -5,18 +5,15 @@
 .form-horizontal {
   width: 400px;
   float: left;
-
 }
-
 
 .title {
   text-align: center;
 }
 
-
 .forms {
   margin-left: 40px;
-  margin-top: 90px
+  margin-top: 40px;
 }
 
 .navbar-default {
@@ -26,11 +23,11 @@
 }
 
 .navbar-default .navbar-brand {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #D5D8DC;
+  color: #D5D8DC;
 }
 
 .searchBox {
@@ -38,7 +35,6 @@
   text-align: center;
   display: flex;
   justify-content: center;
-
 }
 
 #search {
@@ -48,14 +44,18 @@
 .row.display-flex {
   display: flex;
   flex-wrap: wrap;
-
 }
+
 .row.display-flex > [class*='col-'] {
   display: flex;
   flex-direction: column;
-
 }
 
 .container {
   margin-top: 40px;
+}
+
+.addMovie, .editMovie {
+  margin-top: 80px;
+  text-align: center;
 }
