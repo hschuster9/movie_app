@@ -2,11 +2,11 @@
      <% @movies.each do |movie| %>
      <div class="col-sm-6 col-md-4">
           <div class="well">
-             <h3><%= link_to movie.title, movie_path(movie) %></h4>
+             <h3><%= link_to movie.title, edit_movie_path(movie) %></h4>
 
           <div class="movieDetails">
                  <p><%= movie.storyline %></p>
-                 <p>Release Date: <%= movie.release_date %></p>
+                 <p>Release Date: <%= movie.release_date.strftime("%m/%d/%Y") %></p>
                  <p>Genres: <%= movie.genres %></p>
                  <p>Link: <%= movie.link %></p>
              </div>
