@@ -12,7 +12,19 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     @movie.update(movie_params)
-    redirect_to movie_path
+    redirect_to movies_path
   end
+
+
+
+
+
+
+
+
+  private
+    def movie_params
+      params.require(:movie).permit(:title, :storyline, :release_date, :genres, :link)
+    end
 
 end
