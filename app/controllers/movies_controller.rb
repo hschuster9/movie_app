@@ -18,6 +18,10 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
   def edit
     @movie = Movie.find(params[:id])
   end
@@ -40,7 +44,7 @@ class MoviesController < ApplicationController
 
   private
     def movie_params
-      params.require(:movie).permit(:title, :storyline, :release_date, :genres, :link)
+      params.require(:movie).permit(:title, :storyline, :release_date, :genres, :movie_url, :image_url)
     end
 
 end

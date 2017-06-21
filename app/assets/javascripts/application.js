@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// $(document).ready(function(){
+//   console.log("hello world!")
+//   $("#form_id").hide();
+//   $("#button_id").click(function(){
+//     $("#form_id").show();
+//
+//   })
+// })
+
+
+
+function toggle_form(id){
+  var movieForm = document.getElementById(id);
+
+  if(movieForm.style.display == 'none')
+    movieForm.style.display = 'block';
+    else {
+      movieForm.style.display = 'none';
+    }
+
+}

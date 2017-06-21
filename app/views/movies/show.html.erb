@@ -1,0 +1,60 @@
+<!-- <h4 class="backLink"><%= link_to "< Back", movies_path %></h4>
+
+<div class="showContainer">
+    <div class="well">
+
+      <h3><%= @movie.title %></h3>
+      <p><%= @movie.storyline %></p>
+      <p>Release Date: <%= @movie.release_date.strftime("%m/%d/%Y")%></p>
+      <p>Genres: <%= @movie.genres %></p>
+       <p><%= link_to "IMDb", @movie.movie_url, target: :_blank %></p>
+
+
+</div>
+</div> -->
+
+<h4 class="backLink"><%= link_to "< Back", movies_path %></h4>
+
+<div class="showContainer">
+    <div class="well">
+
+      <h3><%= @movie.title %></h3>
+      <p><%= @movie.storyline %></p>
+      <p>Release Date: <%= @movie.release_date.strftime("%m/%d/%Y")%></p>
+      <p>Genres: <%= @movie.genres %></p>
+      <p><%= link_to "IMDb", @movie.movie_url, target: :_blank %></p>
+
+      <button onclick="toggle_form('form_id')" class="btn btn-primary">Edit</button>
+</div>
+</div>
+
+<div class="forms" id="form_id" style="display: none">
+  <div class="form-horizontal">
+    <%= form_for @movie do |f| %>
+      <p>
+      <%= f.label :title, "Movie Title" %>
+      <%= f.text_field :title, :class=>"form-control" %>
+      <p>
+      <%= f.label :storyline, "Story Line" %>
+      <%= f.text_area :storyline , size: "10x5", :class=>"form-control" %>
+      <p>
+      <%= f.label :release_date, "Release Date" %>
+      <%= f.date_select :release_date, :class=>"form-control" %>
+      <p>
+      <%= f.label :genres, "Genres" %>
+      <%= f.text_field :genres, :class=>"form-control" %>
+      <p>
+      <%= f.label :movie_url, "IMDb Link" %>
+      <%= f.text_field :movie_url, :class=>"form-control" %>
+      <p>
+        <%= f.label :image_url, "IMDb Link" %>
+        <%= f.text_field :image_url, :class=>"form-control" %>
+        <p>
+      <br>
+      <%= f.submit "Update", :class =>"btn btn-primary"%>
+    <% end %>
+    <%= form_for @movie, url: movies_path, method: :delete, authenticity_token: true do |f| %>
+    <%= f.submit "Delete", :class =>"btn btn-danger"%>
+    <% end %>
+  </div>
+</div>
