@@ -5,8 +5,9 @@ class CreateMovies < ActiveRecord::Migration[5.0]
       t.text :storyline
       t.date :release_date
       t.string :genres
-      t.string :link
-  
+      t.string :movie_url
+      t.string :image_url
+
     end
   end
 end

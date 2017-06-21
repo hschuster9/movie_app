@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20170621000429) do
     t.text   "storyline"
     t.date   "release_date"
     t.string "genres"
-    t.string "link"
+    t.string "movie_url"
+    t.string "image_url"
   end
 
 end
