@@ -1,4 +1,5 @@
-
+<h5> Add Movie </h5>
+<h4><%= link_to "Home", movies_path %></h4>
 
 <div class="form-horizontal">
   <%= form_for @movie do |f| %>
@@ -10,7 +11,7 @@
   <%= f.text_field :storyline, :class=>"form-control" %>
 <p>
   <%= f.label :release_date, "Release Date" %>
-  <%= f.text_field :release_date, :class=>"form-control" %>
+  <%= f.text_field :release_date, :class=>"form-control", :placeholder=>"yyyy/mm/dd" %>
 <p>
   <%= f.label :genres, "Genres" %>
   <%= f.text_field :genres, :class=>"form-control" %>
@@ -19,11 +20,8 @@
   <%= f.text_field :link, :class=>"form-control" %>
 <p>
 
-<%= f.submit "Update", :class =>"btn btn-primary"%>
+<%= f.submit "Create", :class =>"btn btn-primary"%>
 
-<%= form_for @movie, url: movies_path, method: :delete, authenticity_token: true do |f| %>
 
-<%= f.submit "Delete", :class =>"btn btn-danger"%>
-<% end %>
 <% end %>
 </div>
