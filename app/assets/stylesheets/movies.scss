@@ -17,7 +17,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display:  flex;
   margin-top: 100px;
 
 }
@@ -36,7 +36,7 @@
 
 .forms {
   margin-left: 40px;
-  margin-top: 60px
+  margin-top: 90px
 }
 
 .navbar-default {
@@ -47,4 +47,20 @@
 
 .navbar-default .navbar-brand {
     color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #D5D8DC;
+}
+
+.searchBox {
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+#search {
+  text-align: center;
 }

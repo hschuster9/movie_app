@@ -1,5 +1,4 @@
 <h5> Add Movie </h5>
-<h4><%= link_to "Home", movies_path %></h4>
 
 <div class="forms">
   <div class="form-horizontal">
@@ -9,7 +8,7 @@
     <%= f.text_field :title, :class=>"form-control" %>
   <p>
     <%= f.label :storyline, "Story Line" %>
-    <%= f.text_field :storyline, :class=>"form-control" %>
+    <%= f.text_area :storyline, size: "10x5", :class=>"form-control" %>
   <p>
     <%= f.label :release_date, "Release Date" %>
     <%= f.date_select :release_date, {:include_blank => true,:default => nil}  %>
