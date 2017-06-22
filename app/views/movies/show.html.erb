@@ -25,7 +25,7 @@
       <%= f.text_area :storyline , size: "10x5", :class=>"form-control" %>
       <p>
       <%= f.label :release_date, "Release Date" %>
-      <%= f.date_select :release_date, :class=>"form-control" %>
+      <%= f.date_select :release_date, start_year: Date.today.year - 45, end_year: Date.today.year + 5, :class=>"form-control" %>
       <p>
       <%= f.label :genres, "Genres" %>
       <%= f.text_field :genres, :class=>"form-control" %>
