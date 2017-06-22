@@ -28,6 +28,7 @@
 </div>
 </div>
 
+<div class="wrapper">
 <div class="forms" id="form_id" style="display: none">
   <div class="form-horizontal">
     <%= form_for @movie do |f| %>
@@ -51,10 +52,13 @@
         <%= f.text_field :image_url, :class=>"form-control" %>
         <p>
       <br>
+
       <%= f.submit "Update", :class =>"btn btn-primary"%>
     <% end %>
+
     <%= form_for @movie, url: movies_path, method: :delete, authenticity_token: true do |f| %>
     <%= f.submit "Delete", :class =>"btn btn-danger"%>
     <% end %>
   </div>
+</div>
 </div>

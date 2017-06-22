@@ -26,7 +26,6 @@
 // })
 
 
-
 function toggle_form(id){
   var movieForm = document.getElementById(id);
 
