@@ -12,9 +12,13 @@
   <div class="row display-flex well">
     <% @movies.each do |movie| %>
       <div class="col-xs-6 col-md-4 movieTitleContainer">
-        <h3><%= link_to movie.title, movie_path(movie)  %></h4>
-            <%= image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage") %>
-          </div>
+        <h3><%= link_to movie.title, movie_path(movie) %></h4>
+
+
+              <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
+
+        </div>
     <% end %>
-  </div>
+
+    </div>
 </div>

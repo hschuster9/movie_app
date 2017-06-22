@@ -55,8 +55,8 @@
   margin-top: 40px;
 }
 
-.addMovie, .editMovie {
-  margin-top: 80px;
+.addMovie {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -65,11 +65,20 @@
 
 }
 
+a:hover {
+  text-decoration: none;
+}
 .movieTitleContainer {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.movieInfoBox {
+margin-top: 140px;
 }
 
 .showContainer {

@@ -1,18 +1,3 @@
-<!-- <h4 class="backLink"><%= link_to "< Back", movies_path %></h4>
-
-<div class="showContainer">
-    <div class="well">
-
-      <h3><%= @movie.title %></h3>
-      <p><%= @movie.storyline %></p>
-      <p>Release Date: <%= @movie.release_date.strftime("%m/%d/%Y")%></p>
-      <p>Genres: <%= @movie.genres %></p>
-       <p><%= link_to "IMDb", @movie.movie_url, target: :_blank %></p>
-
-
-</div>
-</div> -->
-
 <h4 class="backLink"><%= link_to "< Back", movies_path %></h4>
 
 <div class="showContainer">
@@ -34,7 +19,7 @@
     <%= form_for @movie do |f| %>
       <p>
       <%= f.label :title, "Movie Title" %>
-      <%= f.text_field :title, :class=>"form-control" %>
+      <%= f.text_field :title, :class=>"form-control", :placeholder => "Required" %>
       <p>
       <%= f.label :storyline, "Story Line" %>
       <%= f.text_area :storyline , size: "10x5", :class=>"form-control" %>
@@ -48,7 +33,7 @@
       <%= f.label :movie_url, "IMDb Link" %>
       <%= f.text_field :movie_url, :class=>"form-control" %>
       <p>
-        <%= f.label :image_url, "IMDb Link" %>
+        <%= f.label :image_url, "Image Link" %>
         <%= f.text_field :image_url, :class=>"form-control" %>
         <p>
       <br>
