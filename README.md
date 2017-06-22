@@ -14,7 +14,7 @@ http://movieapphs.herokuapp.com/
 ## User Stories
 * As a user, I can view a list of movies & click on its title or image to view the details
 * As a user, I can add/edit/delete movies
-* As a user, when I add a movie, I must enter data for all fields in order for it to save to the database.
+* As a user, when I add a movie, I must enter data for all fields in order for it to save to the database
 * As a user, I can search keywords to find a particular movie that contains the keyword in the title, description, or genre
 
 
