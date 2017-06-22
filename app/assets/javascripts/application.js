@@ -15,17 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-
-// $(document).ready(function(){
-//   console.log("hello world!")
-//   $("#form_id").hide();
-//   $("#button_id").click(function(){
-//     $("#form_id").show();
-//
-//   })
-// })
-
-
 function toggle_form(id){
   var movieForm = document.getElementById(id);
 
