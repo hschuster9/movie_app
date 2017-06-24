@@ -25,3 +25,14 @@ function toggle_form(id){
     }
 
 }
+
+
+$(document).ready(function(){
+  $("#seachButton").click(function(){
+    return clearSearch();
+  })
+})
+
+function clearSearch(){
+  $("#search").val("");
+}

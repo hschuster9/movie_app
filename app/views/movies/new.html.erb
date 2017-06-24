@@ -1,7 +1,6 @@
 <h4 class="backLink"><%= link_to "< Back", movies_path %></h4>
 <h4 class="addMovie"> Add Movie </h4>
 
-
 <div class="forms">
   <div class="form-horizontal">
     <%= form_for @movie do |f| %>
@@ -21,10 +20,9 @@
       <%= f.label :movie_url, "IMDb Link" %>
       <%= f.text_field :movie_url, :class=>"form-control", :placeholder => "Required", :required => true  %>
       <p>
-
-        <%= f.label :image_url, "Image Link" %>
-        <%= f.text_field :image_url, :class=>"form-control", :placeholder => "Required", :required => true %>
-        <p>
+      <%= f.label :image_url, "Image Link" %>
+      <%= f.text_field :image_url, :class=>"form-control", :placeholder => "Required", :required => true %>
+      <p>
       <br>
 
       <%= f.submit "Create", :class =>"btn btn-primary"%>
