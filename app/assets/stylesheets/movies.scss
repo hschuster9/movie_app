@@ -20,6 +20,7 @@
   background-color: #5D6D7E;
   height: 60px;
   padding-top: 5px;
+
 }
 
 .navbar-default .navbar-brand {
@@ -100,7 +101,6 @@ img {
 .container:before,
 .container:after,
 .row.display-flex:before,
-.row.display-flex:after
-{
+.row.display-flex:after {
   content: normal;
 }
