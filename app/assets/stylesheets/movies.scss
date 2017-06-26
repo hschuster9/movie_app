@@ -96,3 +96,11 @@ img {
   height: 295px;
   width: 200px;
 }
+
+.container:before,
+.container:after,
+.row.display-flex:before,
+.row.display-flex:after
+{
+  content: normal;
+}
