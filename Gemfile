@@ -5,8 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-gem 'tmdb-api'
+gem "typedjs-rails", "~> 1.0.4"
 
 gem "rails_12factor", group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
