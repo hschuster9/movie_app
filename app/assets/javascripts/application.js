@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require lib/typed
+//= require lib/typed-implementation
+
 
 function toggle_form(id){
   var movieForm = document.getElementById(id);

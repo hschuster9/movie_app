@@ -1,0 +1,10 @@
+ready = ->
+  Typed.new '.element',
+    strings: [
+      'Welcome to Movie App.'
+      'A collection of your favorite movies.'
+    ]
+    typeSpeed: 0
+  return
+$(document).ready ready
+$(document).on 'turbolinks:load', ready

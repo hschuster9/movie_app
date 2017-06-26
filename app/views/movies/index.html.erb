@@ -1,3 +1,11 @@
+<div class="inner cover jumbotron" style="margin-bottom:0px; background-color: #FF7F50; color: white; height: 120px; text-align:center; margin-top: 20px;font-weight: bold;">
+  <h1 class="cover-heading"></h1>
+  <p class="lead">
+    <span class='element'></span>
+  </p>
+
+</div>
+
 <div class="searchBox">
   <div class="form-inline">
   <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
@@ -9,19 +17,13 @@
 </div>
 </div>
 
-
-
 <div class="container">
   <div class="row display-flex well">
     <% @movies.each do |movie| %>
       <div class="col-xs-6 col-md-4 movieTitleContainer">
-        <h3><%= link_to movie.title, movie_path(movie) %></h4>
-
-
-              <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
-
-        </div>
+        <h3><%= link_to movie.title, movie_path(movie) %></h3>
+            <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
+      </div>
     <% end %>
-
     </div>
 </div>
