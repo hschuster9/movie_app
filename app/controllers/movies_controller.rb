@@ -38,19 +38,6 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
-
-def search_tmdb
-  @movie = Tmdb::Movie.lookup_tmdb(params[:search])
-end
-
-def lookup_tmdb(title)
-  title = params[:search]
-  @movie = Tmdb::Movie.find(title)
-end
-
-
-
-
   private
     def movie_params
       params.require(:movie).permit(:title, :storyline, :release_date, :genres, :movie_url, :image_url)
