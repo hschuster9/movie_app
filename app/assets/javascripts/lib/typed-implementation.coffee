@@ -4,7 +4,7 @@ ready = ->
       'Welcome to Movie App.'
       'A collection of your favorite movies.'
     ]
-    typeSpeed: 0
+    typeSpeed: 30
   return
 $(document).ready ready
 $(document).on 'turbolinks:load', ready
