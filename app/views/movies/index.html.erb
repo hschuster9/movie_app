@@ -19,10 +19,19 @@
 </div>
 
 <div class="container">
-  <div class="row display-flex well">
-    <% if @movies.empty? %>
-        <p> No Results </p>
+  <% if @movies.empty? %>
+    <h3> No Results </h3>
+    <h3>Here are some of the latest movies </h3>
+    <div class="row display-flex well">
+      <% @suggested.each do |movie| %>
+        <div class="col-xs-6 col-md-4 movieTitleContainer">
+          <h3> <%= movie.title %> </h3>
+            <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
+        </div>
       <% end  %>
+      <% end %>
+
+
     <% @movies.each do |movie| %>
       <div class="col-xs-6 col-md-4 movieTitleContainer">
         <h3><%= link_to movie.title, movie_path(movie) %></h3>
