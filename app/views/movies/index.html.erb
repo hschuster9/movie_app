@@ -3,19 +3,17 @@
   <p class="lead">
     <span class='element'></span>
   </p>
-
 </div>
 
 <div class="searchBox">
   <div class="form-inline">
-  <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Movies",  :class=>"form-control"%>
-
-  <%= button_tag(type: 'submit', :class=>"btn btn-primary", :id=>"searchButton") do %>
+    <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Movies",  :class=>"form-control"%>
+    <%= button_tag(type: 'submit', :class=>"btn btn-primary", :id=>"searchButton") do %>
     <span class="glyphicon glyphicon-search"></span>
-  <% end %>
-  <% end %>
-</div>
+    <% end %>
+    <% end %>
+  </div>
 </div>
 
 <div class="container">
@@ -25,14 +23,13 @@
     <div class="row display-flex well">
       <% @suggested.each do |movie| %>
         <div class="col-xs-6 col-md-4 movieTitleContainer">
-          <h3> <%= link_to movie.title, movie_path(movie) %> </h3>
-            <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
+          <h3><%= link_to movie.title, movie_path(movie) %> </h3>
+              <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
         </div>
-      <% end  %>
       <% end %>
+  <% end %>
+  </div>
 </div>
-</div>
-
 
 <div class="container">
   <div class="row display-flex well">
@@ -42,5 +39,5 @@
             <%= link_to (image_tag(movie.image_url, :alt=>"Movie Poster", :class=>"movieImage")), movie_path(movie) %>
       </div>
     <% end %>
-    </div>
+  </div>
 </div>
