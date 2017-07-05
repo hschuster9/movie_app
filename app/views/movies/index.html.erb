@@ -10,6 +10,7 @@
   <div class="form-inline">
   <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Movies",  :class=>"form-control"%>
+
   <%= button_tag(type: 'submit', :class=>"btn btn-primary", :id=>"searchButton") do %>
     <span class="glyphicon glyphicon-search"></span>
   <% end %>
@@ -19,6 +20,9 @@
 
 <div class="container">
   <div class="row display-flex well">
+    <% if @movies.empty? %>
+        <p> No Results </p>
+      <% end  %>
     <% @movies.each do |movie| %>
       <div class="col-xs-6 col-md-4 movieTitleContainer">
         <h3><%= link_to movie.title, movie_path(movie) %></h3>
